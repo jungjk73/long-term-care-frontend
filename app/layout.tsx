@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "2026 방문요양 계산기",
+  title: "방문요양 본인부담금 계산기",
   description: "2026년 수가 기준 방문요양 본인부담금 계산기",
 };
 

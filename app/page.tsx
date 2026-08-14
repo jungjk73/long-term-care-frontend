@@ -57,7 +57,7 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-[#f0f2f5] p-5 flex justify-center items-start font-sans">
             <div className="w-full max-w-[500px] bg-white p-6 rounded-[12px] shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
-                <h1 className="text-[1.8rem] text-center text-[#4a90e2] font-bold mb-6">방문요양 본인부담금 계산기</h1>
+                <h1 className="text-[1.5rem] text-center text-[#4a90e2] font-bold mb-6">방문요양 본인부담금 계산기</h1>
 
                 <div className="mb-4 text-black">
                     <label className="block font-bold mb-2 text-[1.5rem]">장기요양 등급</label>
@@ -134,7 +134,7 @@ export default function Home() {
                         <span>{result.withinLimitCost.toLocaleString()}원</span>
                     </div>
                     <div className="flex justify-between mb-[10px] text-[1.3rem]">
-                        <span>한도 초과액 (100% 자부담)</span>
+                        <span>한도 초과액<br/> (100% 자부담)</span>
                         <span className="text-[#e74c3c] font-bold">{result.overLimitCost.toLocaleString()}원</span>
                     </div>
                     <div className="flex justify-between mb-[10px] text-[1.3rem]">

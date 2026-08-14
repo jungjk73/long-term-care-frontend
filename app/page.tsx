@@ -57,12 +57,12 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-[#f0f2f5] p-5 flex justify-center items-start font-sans">
             <div className="w-full max-w-[500px] bg-white p-6 rounded-[12px] shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
-                <h1 className="text-[2rem] text-center text-[#4a90e2] font-bold mb-6">방문요양 본인부담금 계산기</h1>
+                <h1 className="text-[1.8rem] text-center text-[#4a90e2] font-bold mb-6">방문요양 본인부담금 계산기</h1>
 
                 <div className="mb-4 text-black">
                     <label className="block font-bold mb-2 text-[1.5rem]">장기요양 등급</label>
                     <select
-                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.5rem] bg-white"
+                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.3rem] bg-white"
                         value={grade}
                         onChange={(e) => setGrade(e.target.value)}
                     >
@@ -77,7 +77,7 @@ export default function Home() {
                 <div className="mb-4 text-black">
                     <label className="block font-bold mb-2 text-[1.5rem]">이용 시간 (1회당)</label>
                     <select
-                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.5rem] bg-white"
+                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.3rem] bg-white"
                         value={serviceTime}
                         onChange={(e) => setServiceTime(Number(e.target.value))}
                     >
@@ -95,7 +95,7 @@ export default function Home() {
                     <label className="block font-bold mb-2 text-[1.5rem]">월 이용 횟수</label>
                     <input
                         type="number"
-                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.5rem] bg-white text-black"
+                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.3rem] bg-white text-black"
                         value={days}
                         min="1"
                         max="31"
@@ -106,7 +106,7 @@ export default function Home() {
                 <div className="mb-4 text-black">
                     <label className="block font-bold mb-2 text-[1.5rem]">본인부담율</label>
                     <select
-                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.5rem] bg-white"
+                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.3rem] bg-white"
                         value={rate}
                         onChange={(e) => setRate(Number(e.target.value))}
                     >
@@ -125,23 +125,23 @@ export default function Home() {
                 </button>
 
                 <div className="mt-6 p-5 bg-[#f5f7fa] rounded-[12px] border-l-4 border-[#4a90e2] text-black">
-                    <div className="flex justify-between mb-[10px] text-[1.5rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.3rem]">
                         <span>총 급여비용</span>
                         <span>{result.totalCost.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mb-[10px] text-[1.5rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.3rem]">
                         <span>등급 내 비용</span>
                         <span>{result.withinLimitCost.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mb-[10px] text-[1.5rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.3rem]">
                         <span>한도 초과액 (100% 자부담)</span>
                         <span className="text-[#e74c3c] font-bold">{result.overLimitCost.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mb-[10px] text-[1.5rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.3rem]">
                         <span>등급 내 본인부담금</span>
                         <span>{result.withinLimitSelfPay.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mt-[15px] pt-[15px] border-t border-[#ddd] font-bold text-[1.5rem] text-[#e74c3c]">
+                    <div className="flex justify-between mt-[15px] pt-[15px] border-t border-[#ddd] font-bold text-[1.3rem] text-[#e74c3c]">
                         <span>총 본인부담금</span>
                         <span>{result.finalSelfPay.toLocaleString()}원</span>
                     </div>

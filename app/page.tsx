@@ -57,12 +57,12 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-[#f0f2f5] p-5 flex justify-center items-start font-sans">
             <div className="w-full max-w-[500px] bg-white p-6 rounded-[12px] shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
-                <h1 className="text-[1.5rem] text-center text-[#4a90e2] font-bold mb-6">2026 방문요양 계산기</h1>
+                <h1 className="text-[2rem] text-center text-[#4a90e2] font-bold mb-6">2026 방문요양 계산기</h1>
 
                 <div className="mb-4 text-black">
-                    <label className="block font-bold mb-2 text-[0.9rem]">장기요양 등급</label>
+                    <label className="block font-bold mb-2 text-[1.5rem]">장기요양 등급</label>
                     <select
-                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1rem] bg-white"
+                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.5rem] bg-white"
                         value={grade}
                         onChange={(e) => setGrade(e.target.value)}
                     >
@@ -75,9 +75,9 @@ export default function Home() {
                 </div>
 
                 <div className="mb-4 text-black">
-                    <label className="block font-bold mb-2 text-[0.9rem]">이용 시간 (1회당)</label>
+                    <label className="block font-bold mb-2 text-[1.5rem]">이용 시간 (1회당)</label>
                     <select
-                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1rem] bg-white"
+                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.5rem] bg-white"
                         value={serviceTime}
                         onChange={(e) => setServiceTime(Number(e.target.value))}
                     >
@@ -92,10 +92,10 @@ export default function Home() {
                 </div>
 
                 <div className="mb-4 text-black">
-                    <label className="block font-bold mb-2 text-[0.9rem]">월 이용 횟수</label>
+                    <label className="block font-bold mb-2 text-[1.5rem]">월 이용 횟수</label>
                     <input
                         type="number"
-                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1rem] bg-white text-black"
+                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.5rem] bg-white text-black"
                         value={days}
                         min="1"
                         max="31"
@@ -104,9 +104,9 @@ export default function Home() {
                 </div>
 
                 <div className="mb-4 text-black">
-                    <label className="block font-bold mb-2 text-[0.9rem]">본인부담율</label>
+                    <label className="block font-bold mb-2 text-[1.5rem]">본인부담율</label>
                     <select
-                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1rem] bg-white"
+                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.5rem] bg-white"
                         value={rate}
                         onChange={(e) => setRate(Number(e.target.value))}
                     >
@@ -125,34 +125,34 @@ export default function Home() {
                 </button>
 
                 <div className="mt-6 p-5 bg-[#f5f7fa] rounded-[12px] border-l-4 border-[#4a90e2] text-black">
-                    <div className="flex justify-between mb-[10px] text-[0.95rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.5rem]">
                         <span>총 급여비용</span>
                         <span>{result.totalCost.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mb-[10px] text-[0.95rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.5rem]">
                         <span>등급 내 비용</span>
                         <span>{result.withinLimitCost.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mb-[10px] text-[0.95rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.5rem]">
                         <span>한도 초과액 (100% 자부담)</span>
                         <span className="text-[#e74c3c] font-bold">{result.overLimitCost.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mb-[10px] text-[0.95rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.5rem]">
                         <span>등급 내 본인부담금</span>
                         <span>{result.withinLimitSelfPay.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mt-[15px] pt-[15px] border-t border-[#ddd] font-bold text-[1.2rem] text-[#e74c3c]">
+                    <div className="flex justify-between mt-[15px] pt-[15px] border-t border-[#ddd] font-bold text-[1.5rem] text-[#e74c3c]">
                         <span>총 본인부담금</span>
                         <span>{result.finalSelfPay.toLocaleString()}원</span>
                     </div>
                 </div>
 
-                <div className="text-[0.8rem] text-[#666] mt-3 leading-[1.4]">
+                <div className="text-[1rem] text-[#666] mt-3 leading-[1.4]">
                     * 본 계산기는 2026년 수가 기준 예시이며, 실제 금액은 건강보험공단 고시 및 이용 상황(가산, 야간/휴일 이용 등)에 따라 다를 수 있습니다.
                 </div>
 
                 <div className="mt-4 p-4 bg-[#eef6ff] rounded-lg border border-[#4a90e2] text-center">
-                    <p className="text-[0.9rem] font-bold text-[#2c3e50] mb-2">자세한 설명은 아래 링크를 참고하세요.</p>
+                    <p className="text-[1.5rem] font-bold text-[#2c3e50] mb-2">자세한 설명은 아래 링크를 참고하세요.</p>
                     <a href="https://blog.naver.com/my-silver/224363003269" target="_blank" rel="noopener noreferrer" className="text-[#4a90e2] underline text-[0.85rem] break-all">
                         https://blog.naver.com/my-silver/224363003269
                     </a>

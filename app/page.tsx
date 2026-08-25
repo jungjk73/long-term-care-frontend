@@ -64,7 +64,7 @@ export default function Home() {
                 <div className="mb-4 text-black">
                     <label className="block font-bold mb-2 text-[1.5rem]">장기요양 등급</label>
                     <select
-                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.3rem] bg-white"
+                        className="w-full p-3 border border-[#ddd] rounded-lg text-[1.2rem] bg-white"
                         value={grade}
                         onChange={(e) => setGrade(e.target.value)}
                     >
@@ -123,26 +123,26 @@ export default function Home() {
                 </div>
 
                 <button
-                    className="w-full p-[14px] bg-[#4a90e2] text-white border-none rounded-lg text-[1.1rem] font-bold cursor-pointer mt-[10px] active:bg-[#357abd]"
+                    className="w-full p-[14px] bg-[#4a90e2] text-white border-none rounded-lg text-[1.5rem] font-bold cursor-pointer mt-[10px] active:bg-[#357abd]"
                     onClick={calculate}
                 >
                     계산하기
                 </button>
 
                 <div className="mt-6 p-5 bg-[#f5f7fa] rounded-[12px] border-l-4 border-[#4a90e2] text-black">
-                    <div className="flex justify-between mb-[10px] text-[1.3rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.0rem]">
                         <span>총 급여비용</span>
                         <span>{result.totalCost.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mb-[10px] text-[1.3rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.0rem]">
                         <span>등급 내 비용</span>
                         <span>{result.withinLimitCost.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mb-[10px] text-[1.3rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.0rem]">
                         <span>한도 초과액<br/> (100% 자부담)</span>
                         <span className="text-[#e74c3c] font-bold">{result.overLimitCost.toLocaleString()}원</span>
                     </div>
-                    <div className="flex justify-between mb-[10px] text-[1.3rem]">
+                    <div className="flex justify-between mb-[10px] text-[1.0rem]">
                         <span>등급 내 본인부담금</span>
                         <span>{result.withinLimitSelfPay.toLocaleString()}원</span>
                     </div>

@@ -28,6 +28,8 @@ export default function Home() {
         const totalCost = serviceTime * days;
 
         let withinLimitCost = 0;
+
+
         let overLimitCost = 0;
 
         if (totalCost > limit) {
@@ -93,14 +95,17 @@ export default function Home() {
 
                 <div className="mb-4 text-black">
                     <label className="block font-bold mb-2 text-[1.5rem]">월 이용 횟수</label>
-                    <input
-                        type="number"
+                    <select
                         className="w-full p-3 border border-[#ddd] rounded-lg text-[1.3rem] bg-white text-black"
                         value={days}
-                        min="1"
-                        max="31"
                         onChange={(e) => setDays(Number(e.target.value))}
-                    />
+                    >
+                        {Array.from({ length: 31 }, (_, i) => i + 1).map((day) => (
+                            <option key={day} value={day}>
+                                {day}회
+                            </option>
+                        ))}
+                    </select>
                 </div>
 
                 <div className="mb-4 text-black">
